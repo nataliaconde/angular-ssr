@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 
 # Build the Angular SSR application
-RUN npm run build:ssr
+RUN npm run build
 
 # Stage 2: Run the Angular SSR application
 FROM node:20-alpine
@@ -31,4 +31,4 @@ RUN npm ci --omit=dev
 EXPOSE 4000
 
 # Start the server
-CMD ["node", "dist/server/main.js"]
+CMD ["npm", "run", "serve"]
