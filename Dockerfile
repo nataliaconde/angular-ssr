@@ -13,9 +13,7 @@ COPY . .
 
 # Build the Angular SSR application
 RUN npm run build:ssr
-Dockerfile
-Copiar
-Editar
+
 # Stage 2: Run the Angular SSR application
 FROM node:20-alpine
 
